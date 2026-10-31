@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Website Maker | Anisha DevWorks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h2>Anisha DevWorks</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#maker">Website Maker</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>अपने बिज़नेस की वेबसाइट बनाएँ</h1>
+    <p>अपने व्यवसाय के लिए एक सुंदर वेबसाइट का नमूना तैयार करें।</p>
+    <button type="button" id="startButton" class="button">शुरू करें</button>
+  </section>
+
+  <section id="services" hidden>
+    <h2>हम किन व्यवसायों के लिए वेबसाइट बना सकते हैं?</h2>
+    <div class="cards">
+      <div class="cards">
+  <div class="card" onclick="selectBusiness('दुकान')">🏪 दुकान</div>
+  <div class="card" onclick="selectBusiness('ब्यूटी पार्लर')">💇 ब्यूटी पार्लर</div>
+  <div class="card" onclick="selectBusiness('ट्यूशन सेंटर')">📚 ट्यूशन सेंटर</div>
+  <div class="card" onclick="selectBusiness('रेस्टोरेंट')">🍽️ रेस्टोरेंट</div>
+</div>
+    </div>
+  </section>
+
+  <section id="maker" hidden>
+    <h2>अपनी वेबसाइट का नमूना बनाएँ</h2>
+    <form id="websiteForm">
+      <label for="businessName">व्यवसाय का नाम</label>
+      <input id="businessName" type="text"
+        placeholder="अपने व्यवसाय का नाम लिखें" required>
+
+      <label for="businessType">व्यवसाय का प्रकार</label>
+      <select id="businessType">
+        <option>दुकान</option>
+        <option>ब्यूटी पार्लर</option>
+        <option>ट्यूशन सेंटर</option>
+        <option>रेस्टोरेंट</option>
+        <option>अन्य सेवा</option>
+      </select>
+      <label for="themeColor">वेबसाइट का रंग चुनें</label>
+<select id="themeColor">
+  <option value="blue">Blue 💙</option>
+  <option value="green">Green 💚</option>
+  <option value="pink">Pink 🩷</option>
+</select>
+<label for="businessImage">व्यवसाय की फोटो चुनें</label>
+<input
+  type="file"
+  id="businessImage"
+  accept="image/*"
+>
+      <textarea id="description"
+        placeholder="अपने व्यवसाय के बारे में लिखें"></textarea>
+
+      <button type="submit" class="button">Preview देखें</button>
+    </form>
+    <div id="preview" class="business-preview" hidden>
+      <button type="button" id="backToForm" class="button">
+  ← वापस जाएँ
+</button>
+  <div class="preview-hero">
+    <img
+  id="previewBusinessImage"
+  alt="Business photo preview"
+  hidden
+  style="max-width: 100%; max-height: 300px; object-fit: cover; border-radius:
+   12px; margin-bottom: 20px;">
+    <h3 id="previewName"></h3>
+    <p id="previewType"></p>
+    <p id="previewDescription"></p>
+    <button type="button" id="professionalWebsiteBtn" class="button">
+  अपनी Professional Website बनवाएँ
+</button>
+
+<div id="contactMessage" hidden>
+  <h3>अपनी वेबसाइट बनवाने के लिए संपर्क करें!</h3>
+  <p>अपनी जरूरत बताने के लिए नीचे WhatsApp बटन पर क्लिक करें।</p>
+
+  <a
+    id="whatsappLink"
+    class="button"
+    href="https://wa.me/919983639816"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp पर संपर्क करें
+  </a>
+
+  <p>Business Contact: +919983639816</p>
+</div>
+  </div>
+  <div class="preview-about">
+    <h3>हमारे बारे में</h3>
+    <p id="previewAbout">
+      हमारे व्यवसाय में आपका स्वागत है!
+    </p>
+  </div>
+</div>
+  </section>
+
+  <footer>
+    <p>© 2026 Anisha DevWorks</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
